@@ -1,27 +1,45 @@
+import * as echarts from "echarts";
 export default {
     title: {
-        text: 'Referer of a Website',
-        subtext: 'Fake Data',
-        left: 'center'
+        text: 'Productivity (App)',
+        position: 'left'
     },
     tooltip: {
         trigger: 'item'
     },
     legend: {
-        orient: 'vertical',
-        left: 'left'
+        orient: 'horizontal',
+        position: 'center',
+        bottom: 'bottom'
     },
     series: [
         {
-            name: 'Access From',
+            name: 'Productivity',
             type: 'pie',
             radius: '50%',
             data: [
-                { value: 1048, name: 'Search Engine' },
-                { value: 735, name: 'Direct' },
-                { value: 580, name: 'Email' },
-                { value: 484, name: 'Union Ads' },
-                { value: 300, name: 'Video Ads' }
+                {
+                    value: 75,
+                    name: 'Productive',
+                    itemStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            { offset: 0, color: 'red' },
+                            { offset: 0.5, color: 'orange' },
+                            { offset: 1, color: 'yellow' }
+                        ]),
+                        borderColor: 'black'
+                    }
+                },
+                {
+                    value: 25,
+                    name: 'Non Productive',
+                    itemStyle: {
+                        color: 'white',
+                        borderColor: 'black'
+                    }
+                },
+                { value: 0, name: 'Neutral' },
+                { value: 0, name: 'Untagged' }
             ],
             emphasis: {
                 itemStyle: {
