@@ -1,4 +1,4 @@
-import * as echarts from "echarts";
+import * as echarts from 'echarts';
 export default {
     title: {
         text: 'Productivity (App)',
@@ -38,8 +38,8 @@ export default {
                         borderColor: 'black'
                     }
                 },
-                { value: 0, name: 'Neutral' },
-                { value: 0, name: 'Untagged' }
+                { value: 30, name: 'Neutral' },
+                { value: 88, name: 'Untagged' }
             ],
             emphasis: {
                 itemStyle: {
